@@ -1,0 +1,15 @@
+PODS:
+  - BarcodeScanner (3.0.0)
+  - Eureka (4.0.1)
+
+DEPENDENCIES:
+  - BarcodeScanner
+  - Eureka
+
+SPEC CHECKSUMS:
+  BarcodeScanner: 4ba61e8b2d50da7b17685085d4bb8e1a0c14613e
+  Eureka: c8bd5cc07143b6f66268c208d28a246c99b41955
+
+PODFILE CHECKSUM: 2734e5582daed886d1ce21605122f8e1eb6e23fe
+
+COCOAPODS: 1.3.1
