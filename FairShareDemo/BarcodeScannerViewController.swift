@@ -14,16 +14,16 @@ class BarcodeScannerViewController: UIViewController, UIPickerViewDataSource, UI
     
     let controller = BarcodeScannerController()
     var storePickerList = ["Kauppakeskus Sello", "Malakies", "Iso Omena"]
-    var eanCodeList = ["6411300000494", "6413600014409" ]
-    var scannedCode: String = "6411300000494"
+    var productList: [Product] = []
+    var shouldDisplayScanner: Bool = false
     
     @IBOutlet weak var scanerButton: UIButton!
     @IBOutlet weak var storePickerTextField: UITextField!
     
-    
+    var scannedProduct: Product?
     
     @IBAction func handleScan(_ sender: Any) {
-        controller.title = "Button Scanner"
+        //controller.title = "Button Scanner"
         present(controller, animated: true, completion: nil)
     }
     
@@ -46,35 +46,61 @@ class BarcodeScannerViewController: UIViewController, UIPickerViewDataSource, UI
         
         let context = appDelegate.persistentContainer.viewContext
         
-        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Products")
+        //FETCH CORE DATA
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Product")
         request.returnsObjectsAsFaults = false
-        
+
         do {
             let results = try context.fetch(request)
+
+            if results.count > 0 {
+
+                for result in results as! [Product] {
+
+
+                    productList.append(result)
+
+
+                   /* if let productname = result.value(forKey: "productname") as? String {
+                        print(productname)
+                    }
+                    if let eancode = result.value(forKey: "eancode") as? String {
+                        productList.append(eancode)
+                        print("Ean code list: \(productList)\n")
+                    }*/
+                }
+            }
         }
         catch {
             //ERROR HANDLING
         }
         
-        //SAVING CORE DATA
-        /*let newProduct = NSEntityDescription.insertNewObject(forEntityName: "Products", into: context)
+//        //SAVING CORE DATA
+//        let newProduct = NSEntityDescription.insertNewObject(forEntityName: "Product", into: context)
+//
+//        newProduct.setValue("Test Product 1", forKey: "productname")
+//        newProduct.setValue("6413600014409", forKey: "eancode")
+//        newProduct.setValue("215", forKey: "productheight")
+//        newProduct.setValue("515", forKey: "productlength")
+//        newProduct.setValue("315", forKey: "productdepth")
+//
+//
+//
+//        do {
+//            try context.save()
+//            print("SAVED")
+//        }
+//        catch {
+//            //ERROR HANDLING
+//        }
         
-        newProduct.setValue("Test Product 1", forKey: "productname")
-        newProduct.setValue("6411300000494", forKey: "eancode")
-        newProduct.setValue("205", forKey: "productheight")
-        newProduct.setValue("415", forKey: "productlength")
-        newProduct.setValue("215", forKey: "productdepth")
-        
-        
-        
-        do {
-            try context.save()
-            print("SAVED")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if self.shouldDisplayScanner {
+            present(controller, animated: false)
+            self.shouldDisplayScanner = false
         }
-        catch {
-            //ERROR HANDLING
-        }*/
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -114,6 +140,15 @@ class BarcodeScannerViewController: UIViewController, UIPickerViewDataSource, UI
         self.view.endEditing(true)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destVC = segue.destination as? ScannedProductViewController, let product = self.scannedProduct {
+            destVC.product = product
+        }
+    }
+    
+    @IBAction func unwindToScanner(segue: UIStoryboardSegue) {
+        self.shouldDisplayScanner = true
+    }
 }
 
 //BarcodeScanner functions
@@ -123,35 +158,23 @@ extension BarcodeScannerViewController: BarcodeScannerCodeDelegate {
     func barcodeScanner(_ controller: BarcodeScannerController, didCaptureCode code: String, type: String) {
         print(code)
         print(type)
-        
-        if eanCodeList.contains(code) {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let scannedProdViewController = storyboard.instantiateViewController(withIdentifier: "ScannedProductPageIdentifier") as! ScannedProductViewController
-            scannedProdViewController.title = "Scanned Product"
-            scannedProdViewController.testCode = code
-            navigationController?.pushViewController(scannedProdViewController, animated: true)
-            
-            let delayTime = DispatchTime.now() + Double(Int64(6 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+        let filteredProducts = productList.filter { $0.eancode == code }
+        if filteredProducts.count > 0 {
+            self.scannedProduct = filteredProducts[0]
+            self.performSegue(withIdentifier: "toScannedProduct", sender: self)
+
+            let delayTime = DispatchTime.now() + Double(Int64(2 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
             DispatchQueue.main.asyncAfter(deadline: delayTime) {
                 controller.dismiss(animated: true, completion: nil)
-                controller.resetWithError()
+                controller.reset(animated: true)
             }
-            
+
         } else {
             let delayTime2 = DispatchTime.now() + Double(Int64(6 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
             DispatchQueue.main.asyncAfter(deadline: delayTime2) {
                 controller.resetWithError()
-                
+
             }
-        
-        
-      
-            
-       
-        
-    
-        
-        
         }
     }
 }

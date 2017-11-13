@@ -14,6 +14,9 @@
 		73841D461F8E1E4900DA80F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73841D451F8E1E4900DA80F5 /* Assets.xcassets */; };
 		73841D491F8E1E4900DA80F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73841D471F8E1E4900DA80F5 /* LaunchScreen.storyboard */; };
 		73841D541F8E1E4900DA80F5 /* FairShareDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73841D531F8E1E4900DA80F5 /* FairShareDemoTests.swift */; };
+		739FE7771FBA42B900D0B7F8 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739FE7761FBA42B900D0B7F8 /* ProductListViewController.swift */; };
+		739FE7791FBA459F00D0B7F8 /* ProductListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739FE7781FBA459F00D0B7F8 /* ProductListCell.swift */; };
+		739FE77B1FBA4EB900D0B7F8 /* ProductListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 739FE77A1FBA4EB900D0B7F8 /* ProductListCell.xib */; };
 		73A5B8891FA083860092C715 /* AddStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A5B8881FA083860092C715 /* AddStoreViewController.swift */; };
 		73A5B8BB1FA090F10092C715 /* FairShareDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 73A5B8B91FA090F10092C715 /* FairShareDemo.xcdatamodeld */; };
 		73A5B8BD1FA1F4790092C715 /* StoreInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A5B8BC1FA1F4790092C715 /* StoreInfo.swift */; };
@@ -46,6 +49,9 @@
 		73841D4F1F8E1E4900DA80F5 /* FairShareDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FairShareDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73841D531F8E1E4900DA80F5 /* FairShareDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FairShareDemoTests.swift; sourceTree = "<group>"; };
 		73841D551F8E1E4900DA80F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		739FE7761FBA42B900D0B7F8 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		739FE7781FBA459F00D0B7F8 /* ProductListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListCell.swift; sourceTree = "<group>"; };
+		739FE77A1FBA4EB900D0B7F8 /* ProductListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductListCell.xib; sourceTree = "<group>"; };
 		73A5B8881FA083860092C715 /* AddStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoreViewController.swift; sourceTree = "<group>"; };
 		73A5B8BA1FA090F10092C715 /* FairShareDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FairShareDemo.xcdatamodel; sourceTree = "<group>"; };
 		73A5B8BC1FA1F4790092C715 /* StoreInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreInfo.swift; sourceTree = "<group>"; };
@@ -112,9 +118,12 @@
 				73A5B8B91FA090F10092C715 /* FairShareDemo.xcdatamodeld */,
 				737604681F8E2B9300201B50 /* BarcodeScannerViewController.swift */,
 				73841D421F8E1E4900DA80F5 /* Main.storyboard */,
+				739FE7761FBA42B900D0B7F8 /* ProductListViewController.swift */,
 				73A5B8BC1FA1F4790092C715 /* StoreInfo.swift */,
 				73FE38201FB4609200AD0647 /* ScannedProductViewController.swift */,
 				73A5B8881FA083860092C715 /* AddStoreViewController.swift */,
+				739FE7781FBA459F00D0B7F8 /* ProductListCell.swift */,
+				739FE77A1FBA4EB900D0B7F8 /* ProductListCell.xib */,
 				73841D451F8E1E4900DA80F5 /* Assets.xcassets */,
 				73841D471F8E1E4900DA80F5 /* LaunchScreen.storyboard */,
 				73841D4A1F8E1E4900DA80F5 /* Info.plist */,
@@ -230,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73841D491F8E1E4900DA80F5 /* LaunchScreen.storyboard in Resources */,
+				739FE77B1FBA4EB900D0B7F8 /* ProductListCell.xib in Resources */,
 				73841D461F8E1E4900DA80F5 /* Assets.xcassets in Resources */,
 				73841D441F8E1E4900DA80F5 /* Main.storyboard in Resources */,
 			);
@@ -355,8 +365,10 @@
 			files = (
 				73A5B8BB1FA090F10092C715 /* FairShareDemo.xcdatamodeld in Sources */,
 				73841D3F1F8E1E4900DA80F5 /* AppDelegate.swift in Sources */,
+				739FE7771FBA42B900D0B7F8 /* ProductListViewController.swift in Sources */,
 				73A5B8891FA083860092C715 /* AddStoreViewController.swift in Sources */,
 				737604691F8E2B9300201B50 /* BarcodeScannerViewController.swift in Sources */,
+				739FE7791FBA459F00D0B7F8 /* ProductListCell.swift in Sources */,
 				73A5B8BD1FA1F4790092C715 /* StoreInfo.swift in Sources */,
 				73FE38211FB4609200AD0647 /* ScannedProductViewController.swift in Sources */,
 			);
