@@ -2,17 +2,20 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13240" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Product" representedClassName="Product" syncable="YES" codeGenerationType="class">
         <attribute name="eancode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productcategory" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="productdepth" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="productheight" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productlabel" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="productlength" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="productname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="productvolume" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="ProductListItem" representedClassName="ProductListItem" syncable="YES" codeGenerationType="class">
         <attribute name="amount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="product" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Product" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Product" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="Product" positionX="34" positionY="63" width="128" height="163"/>
         <element name="ProductListItem" positionX="-245" positionY="-22" width="128" height="73"/>
     </elements>
 </model>

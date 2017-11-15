@@ -17,22 +17,30 @@ class ScannedProductViewController: UIViewController {
     @IBOutlet weak var productLength: UILabel!
     @IBOutlet weak var productDepth: UILabel!
     @IBOutlet weak var productFaces: UITextField!
+    @IBOutlet weak var productCategory: UILabel!
+    @IBOutlet weak var productProducer: UILabel!
+    @IBOutlet weak var productVolume: UILabel!
     
     var product: Product?
     var context: NSManagedObjectContext?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.productCode.text = product?.eancode
         self.productName.text = product?.productname
         self.productHeight.text = product?.productheight
         self.productLength.text = product?.productlength
         self.productDepth.text = product?.productdepth
+        self.productCategory.text = product?.productcategory
+        self.productProducer.text = product?.productlabel
+        if let prodVolume = product?.productvolume {
+            self.productVolume.text = String(describing: prodVolume)
+        }
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
         self.context = appDelegate.persistentContainer.viewContext
-        
         
         let toolbar:UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0,  width: self.view.frame.size.width, height: 30))
         //create left side empty space so that done button set on right side
@@ -67,6 +75,18 @@ class ScannedProductViewController: UIViewController {
     //MARK: Actions
     
     @IBAction func nextProductPressed(_ sender: Any) {
+        addProductToList()
+        performSegue(withIdentifier: "unwindToScanner", sender: self)
+        
+    }
+    
+    @IBAction func finishScanningPressed(_ sender: Any) {
+        addProductToList()
+        self.performSegue(withIdentifier: "toProductList", sender: self)
+    }
+    
+    //Function that adds product item to core data product list
+    func addProductToList() {
         guard let dataContext = self.context else { return }
         guard let amountText = productFaces.text else { return }
         let productListItem = NSEntityDescription.insertNewObject(forEntityName: "ProductListItem", into: dataContext)
@@ -74,13 +94,13 @@ class ScannedProductViewController: UIViewController {
         productListItem.setValue(product, forKey: "product")
         productListItem.setValue(Int16(amountText), forKey: "amount")
         
-        
         do {
             try dataContext.save()
-            print("SAVED")
+            print("DATA SAVED")
         }
         catch {
-            //ERROR HANDLING
+            print("Content couldn't be saved!")
+            print(error)
         }
         
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "ProductListItem")
@@ -88,24 +108,14 @@ class ScannedProductViewController: UIViewController {
         
         do {
             let results = try dataContext.fetch(request)
-            
             if results.count > 0 {
-                
                 for result in results as! [ProductListItem] {
-                    
                     print(result)
                 }
             }
         } catch {
-            //ERROR HANDLING
+            print("Content couldn't be retrieved!")
+            print(error)
         }
-        
-        performSegue(withIdentifier: "unwindToScanner", sender: self)
-        
-    }
-    
-    @IBAction func finishScanningPressed(_ sender: Any) {
-        
-        self.performSegue(withIdentifier: "toProductList", sender: self)
     }
 }

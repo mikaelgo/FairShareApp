@@ -59,6 +59,7 @@ class BarcodeScannerViewController: UIViewController, UIPickerViewDataSource, UI
 
 
                     productList.append(result)
+                    print(results)
 
 
                    /* if let productname = result.value(forKey: "productname") as? String {
@@ -83,6 +84,9 @@ class BarcodeScannerViewController: UIViewController, UIPickerViewDataSource, UI
 //        newProduct.setValue("215", forKey: "productheight")
 //        newProduct.setValue("515", forKey: "productlength")
 //        newProduct.setValue("315", forKey: "productdepth")
+//        newProduct.setValue("ToTi", forKey: "productcategory")
+//        newProduct.setValue("MT", forKey: "productlabel")
+//        newProduct.setValue(Int32(34324750), forKey: "productvolume")
 //
 //
 //
