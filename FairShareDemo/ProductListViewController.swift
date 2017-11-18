@@ -16,6 +16,12 @@ class ProductListViewController: UIViewController, UITableViewDelegate, UITableV
     var context: NSManagedObjectContext?
     var productListItems: [ProductListItem]?
     
+    
+    @IBAction func productListToFsPressed(_ sender: UIBarButtonItem) {
+        self.performSegue(withIdentifier: "toFairShareID", sender: self)
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return productListItems?.count ?? 0
     }
@@ -32,7 +38,19 @@ class ProductListViewController: UIViewController, UITableViewDelegate, UITableV
         return 80
     }
     
-
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            guard let itemToDelete = productListItems?[indexPath.row] else { return }
+            self.deleleteProductListItem(item: itemToDelete)
+        }
+    }
+    
+ 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -70,6 +88,29 @@ class ProductListViewController: UIViewController, UITableViewDelegate, UITableV
             self.tableView.reloadData()
         } catch {
             //ERROR HANDLING
+        }
+    }
+    
+    func deleleteProductListItem(item: ProductListItem) {
+        guard let dataContext = self.context else { return }
+        dataContext.delete(item)
+        
+//        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "ProductListItem")
+//        request.returnsObjectsAsFaults = false
+//
+//        do {
+//            let results = try dataContext.fetch(request)
+//            self.productListItems = results as? [ProductListItem]
+//            self.tableView.reloadData()
+//        } catch {
+//            //ERROR HANDLING
+//        }
+        self.fetchProductListItems()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destVC = segue.destination as? FairShareViewController, let listItems = self.productListItems {
+            destVC.productListItems = listItems
         }
     }
     

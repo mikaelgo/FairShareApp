@@ -10,6 +10,7 @@ import UIKit
 import BarcodeScanner
 import CoreData
 
+
 class BarcodeScannerViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     let controller = BarcodeScannerController()
@@ -17,6 +18,7 @@ class BarcodeScannerViewController: UIViewController, UIPickerViewDataSource, UI
     var productList: [Product] = []
     var shouldDisplayScanner: Bool = false
     
+
     @IBOutlet weak var scanerButton: UIButton!
     @IBOutlet weak var storePickerTextField: UITextField!
     
@@ -41,11 +43,76 @@ class BarcodeScannerViewController: UIViewController, UIPickerViewDataSource, UI
         controller.errorDelegate = self
         controller.dismissalDelegate = self
         
-        //STORE CORE DATA
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        
+
         let context = appDelegate.persistentContainer.viewContext
         
+        
+//        //read products.json file and iterate through each item in the list
+//
+//        //get path of resource file products.json added in the project->build phase
+//        if let path = Bundle.main.path(forResource: "products", ofType: "json") {
+//            do {
+//                //get the data of file if it's valid json
+//                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+//                //parse/serialize json
+//                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+//                //get the array list "products" from jsonResult found from the root of json object and set it as allProducts
+//                if let jsonResult = jsonResult as? [String: Any], let allProducts = jsonResult["products"] as? [Any] {
+//                    //iterate through each json object in allProducts list
+//                    for product in allProducts {
+//                        //Add each product to core data if it's not already there
+//                        let productData = NSEntityDescription.insertNewObject(forEntityName: "Product", into: context) as! Product
+//                        guard let productDict = product as? [String: Any] else { return }
+//
+//                        for (key, value) in productDict {
+//                            switch(key) {
+//                            case "eancode":
+//                                productData.eancode = String(describing: value)
+//                                break
+//                            case "productname":
+//                                productData.productname = value as? String
+//                                break
+//                            case "productwidth":
+//                                productData.productlength =  String(describing: value)
+//                                break
+//                            case "productdepht":
+//                                productData.productdepth =  String(describing: value)
+//                                break
+//                            case "productheight":
+//                                productData.productheight =  String(describing: value)
+//                                break
+//                            case "productcategory":
+//                                productData.productcategory = value as? String
+//                                break
+//                            case "productlabel":
+//                                productData.productlabel = value as? String
+//                                break
+//                            case "productvolume":
+//                                guard let integerValue = value as? Int else { return }
+//                                productData.productvolume = Int32.init(truncating: integerValue as NSNumber)
+//                                break
+//                            default:
+//                                break
+//                            }
+//                        }
+//                        do {
+//                            try context.save()
+//                            print("SAVED")
+//                        }
+//                        catch {
+//                            //ERROR HANDLING
+//                        }
+//                    }
+//                }else{
+//                    print("else")
+//                }
+//            } catch {
+//                // handle error
+//            }
+//        }
+        
+    
         //FETCH CORE DATA
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Product")
         request.returnsObjectsAsFaults = false
@@ -75,28 +142,6 @@ class BarcodeScannerViewController: UIViewController, UIPickerViewDataSource, UI
         catch {
             //ERROR HANDLING
         }
-        
-//        //SAVING CORE DATA
-//        let newProduct = NSEntityDescription.insertNewObject(forEntityName: "Product", into: context)
-//
-//        newProduct.setValue("Test Product 1", forKey: "productname")
-//        newProduct.setValue("6413600014409", forKey: "eancode")
-//        newProduct.setValue("215", forKey: "productheight")
-//        newProduct.setValue("515", forKey: "productlength")
-//        newProduct.setValue("315", forKey: "productdepth")
-//        newProduct.setValue("ToTi", forKey: "productcategory")
-//        newProduct.setValue("MT", forKey: "productlabel")
-//        newProduct.setValue(Int32(34324750), forKey: "productvolume")
-//
-//
-//
-//        do {
-//            try context.save()
-//            print("SAVED")
-//        }
-//        catch {
-//            //ERROR HANDLING
-//        }
         
     }
     
@@ -195,4 +240,6 @@ extension BarcodeScannerViewController: BarcodeScannerDismissalDelegate {
     func barcodeScannerDidDismiss(_ controller: BarcodeScannerController) {
         controller.dismiss(animated: true, completion: nil)
     }
-}
+    
+    }
+

@@ -12,6 +12,8 @@ class ProductListCell: UITableViewCell {
 
     @IBOutlet weak var productNameLabel: UILabel!
     var productListItem: ProductListItem?
+
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

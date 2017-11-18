@@ -1,0 +1,954 @@
+{
+    "products": [
+  {
+    "productname": "K-Menu WC-paperi 8 rl",
+    "eancode": 6410405147820,
+    "productcategory": "ToTi",
+    "productlabel": "Ruokakesko Oy",
+    "productwidth": 405,
+    "productdepht": 105,
+    "productheight": 200,
+    "productvolume": 8505000
+  },
+  {
+    "productname": "Lambi Deluxe WC-paperi 6 rl",
+    "eancode": 6414300094821,
+    "productcategory": "ToTi",
+    "productlabel": "MT",
+    "productwidth": 375,
+    "productdepht": 130,
+    "productheight": 194,
+    "productvolume": 9457500
+  },
+  {
+    "productname": "Lambi WC-paperi 6 rl Love Story",
+    "eancode": 7316970152117,
+    "productcategory": "ToTi",
+    "productlabel": "MT",
+    "productwidth": 330,
+    "productdepht": 110,
+    "productheight": 202,
+    "productvolume": 7332600
+  },
+  {
+    "productname": "Lambi WC-paperi 4 rl Superlong",
+    "eancode": 6414300083870,
+    "productcategory": "ToTi",
+    "productlabel": "MT",
+    "productwidth": 245,
+    "productdepht": 125,
+    "productheight": 204,
+    "productvolume": 6247500
+  },
+  {
+    "productname": "Lambi WC-paperi 24 rl (säkki) Lovestory",
+    "eancode": 7316975152112,
+    "productcategory": "ToTi",
+    "productlabel": "MT",
+    "productwidth": 245,
+    "productdepht": 750,
+    "productheight": 204,
+    "productvolume": 37485000
+  },
+  {
+    "productname": "Lambi WC-paperi 12 rl valkoinen",
+    "eancode": 7316970152452,
+    "productcategory": "ToTi",
+    "productlabel": "MT",
+    "productwidth": 410,
+    "productdepht": 110,
+    "productheight": 303,
+    "productvolume": 13665300
+  },
+  {
+    "productname": "Lambi WC 24 rl",
+    "eancode": 7316970179459,
+    "productcategory": "ToTi",
+    "productlabel": "MT",
+    "productwidth": 425,
+    "productdepht": 225,
+    "productheight": 303,
+    "productvolume": 28974375
+  },
+  {
+    "productname": "Lambi WC-paperi 8 rl valkoinen",
+    "eancode": 6414300152460,
+    "productcategory": "ToTi",
+    "productlabel": "MT",
+    "productwidth": 420,
+    "productdepht": 110,
+    "productheight": 202,
+    "productvolume": 9332400
+  },
+  {
+    "productname": "Lotus Fresh 8 rl",
+    "eancode": 7322540784916,
+    "productcategory": "ToTi",
+    "productlabel": "SCA",
+    "productwidth": 421,
+    "productdepht": 117,
+    "productheight": 204,
+    "productvolume": 10048428
+  },
+  {
+    "productname": "Lotus Soft Embo 8 rl",
+    "eancode": 6413200330206,
+    "productcategory": "ToTi",
+    "productlabel": "SCA",
+    "productwidth": 432,
+    "productdepht": 120,
+    "productheight": 204,
+    "productvolume": 10575360
+  },
+  {
+    "productname": "Lotus Soft Embo Cotton Fresh",
+    "eancode": 7322540715170,
+    "productcategory": "ToTi",
+    "productlabel": "SCA",
+    "productwidth": 410,
+    "productdepht": 110,
+    "productheight": 200,
+    "productvolume": 9020000
+  },
+  {
+    "productname": "Lotus kostea wc-paperi Pure hajusteeton 42 kpl",
+    "eancode": 7322540856170,
+    "productcategory": "ToTi",
+    "productlabel": "SCA",
+    "productwidth": 140,
+    "productdepht": 30,
+    "productheight": 110,
+    "productvolume": 462000
+  },
+  {
+    "productname": "Lotus kostea wc-paperi Pure hajusteeton 2 x 42 kpl",
+    "eancode": 7322540882643,
+    "productcategory": "ToTi",
+    "productlabel": "SCA",
+    "productwidth": 140,
+    "productdepht": 60,
+    "productheight": 110,
+    "productvolume": 924000
+  },
+  {
+    "productname": "Lotus kostea wc-paperi Fresh Cucumber 42 kpl",
+    "eancode": 7322540856118,
+    "productcategory": "ToTi",
+    "productlabel": "SCA",
+    "productwidth": 140,
+    "productdepht": 30,
+    "productheight": 110,
+    "productvolume": 462000
+  },
+  {
+    "productname": "Lotus kostea wc-paperi Delicate Rose 42 kpl",
+    "eancode": 7322540856149,
+    "productcategory": "ToTi",
+    "productlabel": "SCA",
+    "productwidth": 140,
+    "productdepht": 30,
+    "productheight": 110,
+    "productvolume": 462000
+  },
+  {
+    "productname": "Lotus Soft Embo 8 rl design, suomi 100v design",
+    "eancode": 6413200330602,
+    "productcategory": "ToTi",
+    "productlabel": "SCA",
+    "productwidth": 415,
+    "productdepht": 200,
+    "productheight": 110,
+    "productvolume": 9130000
+  },
+  {
+    "productname": "Lotus Soft Embo 16 rl",
+    "eancode": 6413200330404,
+    "productcategory": "ToTi",
+    "productlabel": "SCA",
+    "productwidth": 415,
+    "productdepht": 230,
+    "productheight": 205,
+    "productvolume": 19567250
+  },
+  {
+    "productname": "Lotus Soft Embo 32 rl",
+    "eancode": 6413200330503,
+    "productcategory": "ToTi",
+    "productlabel": "SCA",
+    "productwidth": 432,
+    "productdepht": 240,
+    "productheight": 408,
+    "productvolume": 42301440
+  },
+  {
+    "productname": "Lotus Soft Embo Mökki",
+    "eancode": 7322540822571,
+    "productcategory": "ToTi",
+    "productlabel": "SCA",
+    "productwidth": 410,
+    "productdepht": 225,
+    "productheight": 200,
+    "productvolume": 18450000
+  },
+  {
+    "productname": "Lotus Embo Ultra Soft 8 rl",
+    "eancode": 6413200557931,
+    "productcategory": "ToTi",
+    "productlabel": "SCA",
+    "productwidth": 410,
+    "productdepht": 110,
+    "productheight": 200,
+    "productvolume": 9020000
+  },
+  {
+    "productname": "Lotus Just 1  6 rl",
+    "eancode": 3133200013680,
+    "productcategory": "ToTi",
+    "productlabel": "SCA",
+    "productwidth": 300,
+    "productdepht": 100,
+    "productheight": 225,
+    "productvolume": 6750000
+  },
+  {
+    "productname": "Lotus Luonnonystävä 8 rl",
+    "eancode": 6413200020886,
+    "productcategory": "ToTi",
+    "productlabel": "SCA",
+    "productwidth": 432,
+    "productdepht": 120,
+    "productheight": 204,
+    "productvolume": 10575360
+  },
+  {
+    "productname": "Pirkka 12 rl valkoinen",
+    "eancode": 6410405117052,
+    "productcategory": "ToTi",
+    "productlabel": "Ruokakesko Oy",
+    "productwidth": 285,
+    "productdepht": 200,
+    "productheight": 205,
+    "productvolume": 11685000
+  },
+  {
+    "productname": "Pirkka 6 rl kuvio",
+    "eancode": 6410405132789,
+    "productcategory": "ToTi",
+    "productlabel": "Ruokakesko Oy",
+    "productwidth": 300,
+    "productdepht": 110,
+    "productheight": 210,
+    "productvolume": 6930000
+  },
+  {
+    "productname": "Pirkka 6 rl pehmeämpi",
+    "eancode": 6410405132826,
+    "productcategory": "ToTi",
+    "productlabel": "Ruokakesko Oy",
+    "productwidth": 330,
+    "productdepht": 110,
+    "productheight": 200,
+    "productvolume": 7260000
+  },
+  {
+    "productname": "Pirkka 6 rl valkoinen",
+    "eancode": 6410405174567,
+    "productcategory": "ToTi",
+    "productlabel": "Ruokakesko Oy",
+    "productwidth": 305,
+    "productdepht": 105,
+    "productheight": 200,
+    "productvolume": 6405000
+  },
+  {
+    "productname": "Pirkka Niksi WC-paperi 6 rl",
+    "eancode": 6410405174925,
+    "productcategory": "ToTi",
+    "productlabel": "Ruokakesko Oy",
+    "productwidth": 300,
+    "productdepht": 95,
+    "productheight": 200,
+    "productvolume": 5700000
+  },
+  {
+    "productname": "SERLA WC-paperi 16 rl keltainen",
+    "eancode": 6414300084525,
+    "productcategory": "ToTi",
+    "productlabel": "MT",
+    "productwidth": 425,
+    "productdepht": 202,
+    "productheight": 215,
+    "productvolume": 18457750
+  },
+  {
+    "productname": "Serla WC-paperi 24 rl keltainen New Design 2016",
+    "eancode": 6414300171485,
+    "productcategory": "ToTi",
+    "productlabel": "MT",
+    "productwidth": 430,
+    "productdepht": 220,
+    "productheight": 303,
+    "productvolume": 28663800
+  },
+  {
+    "productname": "Serla WC-paperi 24 rl valkoinen NG16",
+    "eancode": 6414301003099,
+    "productcategory": "ToTi",
+    "productlabel": "MT",
+    "productwidth": 252,
+    "productdepht": 370,
+    "productheight": 388,
+    "productvolume": 36177120
+  },
+  {
+    "productname": "Serla WC-paperi 6 rl valkoinen",
+    "eancode": 6414301003020,
+    "productcategory": "ToTi",
+    "productlabel": "MT",
+    "productwidth": 370,
+    "productdepht": 126,
+    "productheight": 194,
+    "productvolume": 9044280
+  },
+  {
+    "productname": "Serla WC-paperi 30 rl (säkki) valkoinen NG16",
+    "eancode": 6414301003037,
+    "productcategory": "ToTi",
+    "productlabel": "MT",
+    "productwidth": 630,
+    "productdepht": 370,
+    "productheight": 194,
+    "productvolume": 45221400
+  },
+  {
+    "productname": "Serla WC-paperi 8 rl keltainen New Design 2016",
+    "eancode": 6414300154327,
+    "productcategory": "ToTi",
+    "productlabel": "MT",
+    "productwidth": 420,
+    "productdepht": 101,
+    "productheight": 202,
+    "productvolume": 8568840
+  },
+  {
+    "productname": "Serla WC-paperi 40 rl (säkki) keltainen",
+    "eancode": 6414305154322,
+    "productcategory": "ToTi",
+    "productlabel": "MT",
+    "productwidth": 505,
+    "productdepht": 420,
+    "productheight": 202,
+    "productvolume": 42844200
+  },
+  {
+    "productname": "K-Menu TP 4 rl",
+    "eancode": 6410405147851,
+    "productcategory": "HoTo",
+    "productlabel": "Ruokakesko Oy",
+    "productwidth": 385,
+    "productdepht": 95,
+    "productheight": 215,
+    "productvolume": 7863625
+  },
+  {
+    "productname": "Lambi Dining",
+    "eancode": 6414301017188,
+    "productcategory": "HoTo",
+    "productlabel": "MT",
+    "productwidth": "",
+    "productdepht": "",
+    "productheight": "",
+    "productvolume": 0
+  },
+  {
+    "productname": "Lambi Gourmet 2 rl",
+    "eancode": 6414300041665,
+    "productcategory": "HoTo",
+    "productlabel": "MT",
+    "productwidth": 220,
+    "productdepht": 115,
+    "productheight": 260,
+    "productvolume": 6578000
+  },
+  {
+    "productname": "Lambi Talous puoliarkki 4 rl",
+    "eancode": 6414301011100,
+    "productcategory": "HoTo",
+    "productlabel": "MT",
+    "productwidth": 420,
+    "productdepht": 115,
+    "productheight": 220,
+    "productvolume": 10626000
+  },
+  {
+    "productname": "Lambi Talous 12 rl",
+    "eancode": 6414300059929,
+    "productcategory": "HoTo",
+    "productlabel": "MT",
+    "productwidth": 320,
+    "productdepht": 225,
+    "productheight": 440,
+    "productvolume": 31680000
+  },
+  {
+    "productname": "Lambi TP 8 rl",
+    "eancode": 6414300059882,
+    "productcategory": "HoTo",
+    "productlabel": "MT",
+    "productwidth": 425,
+    "productdepht": 220,
+    "productheight": 225,
+    "productvolume": 21037500
+  },
+  {
+    "productname": "Lotus Emilia 4 rl Design Mummolamuistoja",
+    "eancode": 6413200034067,
+    "productcategory": "HoTo",
+    "productlabel": "SCA",
+    "productwidth": 432,
+    "productdepht": 115,
+    "productheight": 212,
+    "productvolume": 10532160
+  },
+  {
+    "productname": "Lotus Chef 4 rl puoliarkki",
+    "eancode": 6413200000130,
+    "productcategory": "HoTo",
+    "productlabel": "SCA",
+    "productwidth": 414,
+    "productdepht": 115,
+    "productheight": 212,
+    "productvolume": 10093320
+  },
+  {
+    "productname": "Lotus Emilia Design 16 rl",
+    "eancode": 6413200404280,
+    "productcategory": "HoTo",
+    "productlabel": "SCA",
+    "productwidth": 424,
+    "productdepht": 230,
+    "productheight": 432,
+    "productvolume": 42128640
+  },
+  {
+    "productname": "Lotus Emilia 16 rl valkoinen",
+    "eancode": 6413200034043,
+    "productcategory": "HoTo",
+    "productlabel": "SCA",
+    "productwidth": 432,
+    "productdepht": 230,
+    "productheight": 424,
+    "productvolume": 42128640
+  },
+  {
+    "productname": "Lotus Emilia Mökki 8 rl",
+    "eancode": 7322540750843,
+    "productcategory": "HoTo",
+    "productlabel": "SCA",
+    "productwidth": 414,
+    "productdepht": 230,
+    "productheight": 212,
+    "productvolume": 20186640
+  },
+  {
+    "productname": "Lotus Emilia 1/2 arkki premium",
+    "eancode": 7322540911954,
+    "productcategory": "HoTo",
+    "productlabel": "SCA",
+    "productwidth": 410,
+    "productdepht": 110,
+    "productheight": 212,
+    "productvolume": 9561200
+  },
+  {
+    "productname": "Lotus Emilia 4 rl valkoinen",
+    "eancode": 6413200340205,
+    "productcategory": "HoTo",
+    "productlabel": "SCA",
+    "productwidth": 410,
+    "productdepht": 110,
+    "productheight": 212,
+    "productvolume": 9561200
+  },
+  {
+    "productname": "Lotus Emilia 4 rl Design by Vallila puoliarkki",
+    "eancode": 7322540624991,
+    "productcategory": "HoTo",
+    "productlabel": "SCA",
+    "productwidth": 413,
+    "productdepht": 110,
+    "productheight": 215,
+    "productvolume": 9767450
+  },
+  {
+    "productname": "Lotus Emilia 4 rl Design by Vallila, Suomi 100v",
+    "eancode": 7322540808001,
+    "productcategory": "HoTo",
+    "productlabel": "SCA",
+    "productwidth": 412,
+    "productdepht": 115,
+    "productheight": 212,
+    "productvolume": 10044560
+  },
+  {
+    "productname": "Lotus Emilia Design Fun by Muumi",
+    "eancode": 7322540881981,
+    "productcategory": "HoTo",
+    "productlabel": "SCA",
+    "productwidth": 414,
+    "productdepht": 230,
+    "productheight": 212,
+    "productvolume": 20186640
+  },
+  {
+    "productname": "Lotus Emilia 8 rl valkoinen",
+    "eancode": 6413200034036,
+    "productcategory": "HoTo",
+    "productlabel": "SCA",
+    "productwidth": 415,
+    "productdepht": 215,
+    "productheight": 215,
+    "productvolume": 19183375
+  },
+  {
+    "productname": "Lotus Käsipyyhe 120 kpl Easy Standard",
+    "eancode": 6413200953221,
+    "productcategory": "HoTo",
+    "productlabel": "SCA",
+    "productwidth": 240,
+    "productdepht": 95,
+    "productheight": 120,
+    "productvolume": 2736000
+  },
+  {
+    "productname": "Lotus Luonnonystävä 4 rl",
+    "eancode": 6413200034111,
+    "productcategory": "HoTo",
+    "productlabel": "SCA",
+    "productwidth": 415,
+    "productdepht": 110,
+    "productheight": 213,
+    "productvolume": 9723450
+  },
+  {
+    "productname": "Pirkka 4 rl puoliarkki kuvio",
+    "eancode": 641040511331,
+    "productcategory": "HoTo",
+    "productlabel": "Ruokakesko Oy",
+    "productwidth": 110,
+    "productdepht": 410,
+    "productheight": 220,
+    "productvolume": 9922000
+  },
+  {
+    "productname": "Pirkka kuvioitu talouspaperi 4 rl",
+    "eancode": 6410405147929,
+    "productcategory": "HoTo",
+    "productlabel": "Ruokakesko Oy",
+    "productwidth": 0,
+    "productdepht": 0,
+    "productheight": 0,
+    "productvolume": 0
+  },
+  {
+    "productname": "Pirkka 4 rl valkoinen",
+    "eancode": 6410405147899,
+    "productcategory": "HoTo",
+    "productlabel": "Ruokakesko Oy",
+    "productwidth": 410,
+    "productdepht": 100,
+    "productheight": 210,
+    "productvolume": 8610000
+  },
+  {
+    "productname": "Pirkka 4 rl puoliarkki kuvio, 20 rl",
+    "eancode": 0,
+    "productcategory": "HoTo",
+    "productlabel": "Ruokakesko Oy",
+    "productwidth": 0,
+    "productdepht": 0,
+    "productheight": 0,
+    "productvolume": 0
+  },
+  {
+    "productname": "Serla talouspyyhe Giant XXL",
+    "eancode": 6414300104032,
+    "productcategory": "HoTo",
+    "productlabel": "MT",
+    "productwidth": 200,
+    "productdepht": 200,
+    "productheight": 244,
+    "productvolume": 9760000
+  },
+  {
+    "productname": "Serla Käsipyyhe 100 kpl keltainen",
+    "eancode": 6414300343448,
+    "productcategory": "HoTo",
+    "productlabel": "MT",
+    "productwidth": 240,
+    "productdepht": 90,
+    "productheight": 135,
+    "productvolume": 2916000
+  },
+  {
+    "productname": "Serla Talous Puoliarkki TP 8 rl",
+    "eancode": 6414300058281,
+    "productcategory": "HoTo",
+    "productlabel": "MT",
+    "productwidth": 440,
+    "productdepht": 220,
+    "productheight": 230,
+    "productvolume": 22264000
+  },
+  {
+    "productname": "Serla Talous Puoliarkki TP 3 rl",
+    "eancode": 6414300059585,
+    "productcategory": "HoTo",
+    "productlabel": "MT",
+    "productwidth": 340,
+    "productdepht": 115,
+    "productheight": 220,
+    "productvolume": 8602000
+  },
+  {
+    "productname": "Serla Lasi ja Peili 2 rl",
+    "eancode": 6414301011131,
+    "productcategory": "HoTo",
+    "productlabel": "MT",
+    "productwidth": 219,
+    "productdepht": 112,
+    "productheight": 270,
+    "productvolume": 6622560
+  },
+  {
+    "productname": "Serla Talous 16 rl  valkoinen",
+    "eancode": 6414300058335,
+    "productcategory": "HoTo",
+    "productlabel": "MT",
+    "productwidth": 440,
+    "productdepht": 230,
+    "productheight": 440,
+    "productvolume": 44528000
+  },
+  {
+    "productname": "Serla Talous 16 rl kuvioitu, Suomi100 kuvioitu",
+    "eancode": 6414300058366,
+    "productcategory": "HoTo",
+    "productlabel": "MT",
+    "productwidth": 440,
+    "productdepht": 230,
+    "productheight": 440,
+    "productvolume": 44528000
+  },
+  {
+    "productname": "Serla Talous 4 rl valkoinen",
+    "eancode": 6414300058182,
+    "productcategory": "HoTo",
+    "productlabel": "MT",
+    "productwidth": 440,
+    "productdepht": 115,
+    "productheight": 220,
+    "productvolume": 11132000
+  },
+  {
+    "productname": "Serla Talous 4 rl Design Suomi 100v kuvioitu",
+    "eancode": 6414300058236,
+    "productcategory": "HoTo",
+    "productlabel": "MT",
+    "productwidth": 440,
+    "productdepht": 115,
+    "productheight": 220,
+    "productvolume": 11132000
+  },
+  {
+    "productname": "Serla Kätevä 135 kpl",
+    "eancode": 6414300079880,
+    "productcategory": "HoTo",
+    "productlabel": "MT",
+    "productwidth": 203,
+    "productdepht": 90,
+    "productheight": 130,
+    "productvolume": 2375100
+  },
+  {
+    "productname": "Serla Kätevä 8 x 135 kpl (säkki)",
+    "eancode": 6414300079897,
+    "productcategory": "HoTo",
+    "productlabel": "MT",
+    "productwidth": 260,
+    "productdepht": 205,
+    "productheight": 345,
+    "productvolume": 18388500
+  },
+  {
+    "productname": "Angry Birds 54",
+    "eancode": 8033661565696,
+    "productcategory": "Hank",
+    "productlabel": "World Cart srl",
+    "productwidth": 165,
+    "productdepht": 52,
+    "productheight": 110,
+    "productvolume": 943800
+  },
+  {
+    "productname": "Daisy kasvopaperi",
+    "eancode": 4740414500036,
+    "productcategory": "Hank",
+    "productlabel": "Horizon tissue",
+    "productwidth": 110,
+    "productdepht": 110,
+    "productheight": 110,
+    "productvolume": 1331000
+  },
+  {
+    "productname": "Harmony facial tissues",
+    "eancode": 8584014814256,
+    "productcategory": "Hank",
+    "productlabel": "SHS Harmanec",
+    "productwidth": 220,
+    "productdepht": 110,
+    "productheight": 60,
+    "productvolume": 1452000
+  },
+  {
+    "productname": "Kleenex 8*9 Balsam",
+    "eancode": 5029053002033,
+    "productcategory": "Hank",
+    "productlabel": "Kimberly-Clark",
+    "productwidth": 225,
+    "productdepht": 50,
+    "productheight": 117,
+    "productvolume": 1316250
+  },
+  {
+    "productname": "Kleenex Collection 56 kpl",
+    "eancode": 5029053009834,
+    "productcategory": "Hank",
+    "productlabel": "Kimberly-Clark",
+    "productwidth": 112,
+    "productdepht": 120,
+    "productheight": 100,
+    "productvolume": 1344000
+  },
+  {
+    "productname": "Kleenex Original 88 kpl",
+    "eancode": 5029053040004,
+    "productcategory": "Hank",
+    "productlabel": "Kimberly-Clark",
+    "productwidth": 230,
+    "productdepht": 47,
+    "productheight": 113,
+    "productvolume": 1221530
+  },
+  {
+    "productname": "K-menu, nenäliina",
+    "eancode": 6410405147875,
+    "productcategory": "Hank",
+    "productlabel": "Horizon Tissue",
+    "productwidth": 120,
+    "productdepht": 90,
+    "productheight": 120,
+    "productvolume": 1296000
+  },
+  {
+    "productname": "Kleenex taskupkt, collection. 6*7 kpl",
+    "eancode": 5029053028859,
+    "productcategory": "Hank",
+    "productlabel": "Kimberly-Clark",
+    "productwidth": 165,
+    "productdepht": 52,
+    "productheight": 80,
+    "productvolume": 686400
+  },
+  {
+    "productname": "Lambi Ultra Soft 15*10",
+    "eancode": 7316970580309,
+    "productcategory": "Hank",
+    "productlabel": "MT",
+    "productwidth": 267,
+    "productdepht": 73,
+    "productheight": 105,
+    "productvolume": 2046555
+  },
+  {
+    "productname": "Lambi Ultra Soft 6*10",
+    "eancode": 7316970580606,
+    "productcategory": "Hank",
+    "productlabel": "MT",
+    "productwidth": 162,
+    "productdepht": 49,
+    "productheight": 105,
+    "productvolume": 833490
+  },
+  {
+    "productname": "Lambi Balsam Aloe Vera 6*10",
+    "eancode": 7316970580651,
+    "productcategory": "Hank",
+    "productlabel": "MT",
+    "productwidth": 162,
+    "productdepht": 49,
+    "productheight": 105,
+    "productvolume": 833490
+  },
+  {
+    "productname": "Lambi Coolmint 6*10",
+    "eancode": 7316970580750,
+    "productcategory": "Hank",
+    "productlabel": "MT",
+    "productwidth": 165,
+    "productdepht": 50,
+    "productheight": 105,
+    "productvolume": 866250
+  },
+  {
+    "productname": "Majesta facial tissues",
+    "eancode": 6343501001,
+    "productcategory": "Hank",
+    "productlabel": "majesta",
+    "productwidth": 220,
+    "productdepht": 100,
+    "productheight": 70,
+    "productvolume": 1540000
+  },
+  {
+    "productname": "Nessu Hellävarainen 100 kpl, Suomi 100",
+    "eancode": 6413200995399,
+    "productcategory": "Hank",
+    "productlabel": "SCA",
+    "productwidth": 130,
+    "productdepht": 95,
+    "productheight": 128,
+    "productvolume": 1580800
+  },
+  {
+    "productname": "Nessu Hellävarainen 45 kpl",
+    "eancode": 6413200953580,
+    "productcategory": "Hank",
+    "productlabel": "SCA",
+    "productwidth": 130,
+    "productdepht": 50,
+    "productheight": 130,
+    "productvolume": 845000
+  },
+  {
+    "productname": "Nessu Aloe Vera Hoitava 75 kpl",
+    "eancode": 6413200953726,
+    "productcategory": "Hank",
+    "productlabel": "SCA",
+    "productwidth": 125,
+    "productdepht": 90,
+    "productheight": 125,
+    "productvolume": 1406250
+  },
+  {
+    "productname": "Nessu Sensitive 6*10",
+    "eancode": 7322540740776,
+    "productcategory": "Hank",
+    "productlabel": "SCA",
+    "productwidth": 165,
+    "productdepht": 45,
+    "productheight": 107,
+    "productvolume": 794475
+  },
+  {
+    "productname": "Nessu Compact 6*7 Hellävarainen",
+    "eancode": 7322540755305,
+    "productcategory": "Hank",
+    "productlabel": "SCA",
+    "productwidth": 160,
+    "productdepht": 50,
+    "productheight": 80,
+    "productvolume": 640000
+  },
+  {
+    "productname": "Nessu Muumi 6*9",
+    "eancode": 3133200013413,
+    "productcategory": "Hank",
+    "productlabel": "SCA",
+    "productwidth": 165,
+    "productdepht": 50,
+    "productheight": 110,
+    "productvolume": 907500
+  },
+  {
+    "productname": "Pirkka Nenäliina 100 kpl",
+    "eancode": 6410400036952,
+    "productcategory": "Hank",
+    "productlabel": "Ruokakesko Oy",
+    "productwidth": 120,
+    "productdepht": 70,
+    "productheight": 120,
+    "productvolume": 1008000
+  },
+  {
+    "productname": "Pirkka 50",
+    "eancode": 6410405070821,
+    "productcategory": "Hank",
+    "productlabel": "Ruokakesko Oy",
+    "productwidth": 120,
+    "productdepht": 37,
+    "productheight": 120,
+    "productvolume": 532800
+  },
+  {
+    "productname": "Pirkka 6*10 nenäliina taskupaketti",
+    "eancode": 6410400029336,
+    "productcategory": "Hank",
+    "productlabel": "Ruokakesko Oy",
+    "productwidth": 166,
+    "productdepht": 50,
+    "productheight": 109,
+    "productvolume": 904700
+  },
+  {
+    "productname": "Serla Nenäliina Silkinpehmeä 70 kpl",
+    "eancode": 6414301010998,
+    "productcategory": "Hank",
+    "productlabel": "MT",
+    "productwidth": 125,
+    "productdepht": 80,
+    "productheight": "137,5",
+    "productvolume": 1375000
+  },
+  {
+    "productname": "Serla Nenäliina Silkinpehmeä 100 kpl",
+    "eancode": 6414300089438,
+    "productcategory": "Hank",
+    "productlabel": "MT",
+    "productwidth": 125,
+    "productdepht": 100,
+    "productheight": "137,5",
+    "productvolume": 1718750
+  },
+  {
+    "productname": "Serla Nenäliina Säästöpakkaus 150 kpl",
+    "eancode": 6414300091257,
+    "productcategory": "Hank",
+    "productlabel": "MT",
+    "productwidth": 125,
+    "productdepht": 105,
+    "productheight": 140,
+    "productvolume": 1837500
+  },
+  {
+    "productname": "Serla Nenäliina Jojoba-balsam 70 kpl",
+    "eancode": 6414300089490,
+    "productcategory": "Hank",
+    "productlabel": "MT",
+    "productwidth": 125,
+    "productdepht": 70,
+    "productheight": 140,
+    "productvolume": 1225000
+  },
+  {
+    "productname": "Serla Nenäliina Raikas Menthol 70 kpl",
+    "eancode": 6414300089520,
+    "productcategory": "Hank",
+    "productlabel": "MT",
+    "productwidth": 125,
+    "productdepht": 70,
+    "productheight": 140,
+    "productvolume": 1225000
+  }
+]
+}

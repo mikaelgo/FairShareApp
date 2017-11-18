@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		64468935FC94FF572570F2C1 /* Pods_FairShareDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C83C721A7D5685F52AF040 /* Pods_FairShareDemo.framework */; };
+		732F49001FBF73DE005D6085 /* FairShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732F48FF1FBF73DE005D6085 /* FairShareViewController.swift */; };
 		737604691F8E2B9300201B50 /* BarcodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737604681F8E2B9300201B50 /* BarcodeScannerViewController.swift */; };
 		73841D3F1F8E1E4900DA80F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73841D3E1F8E1E4900DA80F5 /* AppDelegate.swift */; };
 		73841D441F8E1E4900DA80F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73841D421F8E1E4900DA80F5 /* Main.storyboard */; };
 		73841D461F8E1E4900DA80F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73841D451F8E1E4900DA80F5 /* Assets.xcassets */; };
 		73841D491F8E1E4900DA80F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73841D471F8E1E4900DA80F5 /* LaunchScreen.storyboard */; };
 		73841D541F8E1E4900DA80F5 /* FairShareDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73841D531F8E1E4900DA80F5 /* FairShareDemoTests.swift */; };
+		739EA81C1FBCE0DC00EAF7C6 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 739EA8191FBCD85A00EAF7C6 /* products.json */; };
 		739FE7771FBA42B900D0B7F8 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739FE7761FBA42B900D0B7F8 /* ProductListViewController.swift */; };
 		739FE7791FBA459F00D0B7F8 /* ProductListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739FE7781FBA459F00D0B7F8 /* ProductListCell.swift */; };
 		739FE77B1FBA4EB900D0B7F8 /* ProductListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 739FE77A1FBA4EB900D0B7F8 /* ProductListCell.xib */; };
@@ -39,6 +41,7 @@
 		0B5F35654FD9E8BB029444E1 /* Pods_FairShareDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FairShareDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D129BA7805A4BA125062D8C /* Pods-FairShareDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FairShareDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FairShareDemoTests/Pods-FairShareDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		554FB6E9D969AC6C1922CEF9 /* Pods-FairShareDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FairShareDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FairShareDemoTests/Pods-FairShareDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		732F48FF1FBF73DE005D6085 /* FairShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FairShareViewController.swift; sourceTree = "<group>"; };
 		737604681F8E2B9300201B50 /* BarcodeScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerViewController.swift; sourceTree = "<group>"; };
 		73841D3B1F8E1E4900DA80F5 /* FairShareDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FairShareDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73841D3E1F8E1E4900DA80F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +52,7 @@
 		73841D4F1F8E1E4900DA80F5 /* FairShareDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FairShareDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73841D531F8E1E4900DA80F5 /* FairShareDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FairShareDemoTests.swift; sourceTree = "<group>"; };
 		73841D551F8E1E4900DA80F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		739EA8191FBCD85A00EAF7C6 /* products.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
 		739FE7761FBA42B900D0B7F8 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		739FE7781FBA459F00D0B7F8 /* ProductListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListCell.swift; sourceTree = "<group>"; };
 		739FE77A1FBA4EB900D0B7F8 /* ProductListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductListCell.xib; sourceTree = "<group>"; };
@@ -118,8 +122,10 @@
 				73A5B8B91FA090F10092C715 /* FairShareDemo.xcdatamodeld */,
 				737604681F8E2B9300201B50 /* BarcodeScannerViewController.swift */,
 				73841D421F8E1E4900DA80F5 /* Main.storyboard */,
+				732F48FF1FBF73DE005D6085 /* FairShareViewController.swift */,
 				739FE7761FBA42B900D0B7F8 /* ProductListViewController.swift */,
 				73A5B8BC1FA1F4790092C715 /* StoreInfo.swift */,
+				739EA8191FBCD85A00EAF7C6 /* products.json */,
 				73FE38201FB4609200AD0647 /* ScannedProductViewController.swift */,
 				73A5B8881FA083860092C715 /* AddStoreViewController.swift */,
 				739FE7781FBA459F00D0B7F8 /* ProductListCell.swift */,
@@ -238,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				739EA81C1FBCE0DC00EAF7C6 /* products.json in Resources */,
 				73841D491F8E1E4900DA80F5 /* LaunchScreen.storyboard in Resources */,
 				739FE77B1FBA4EB900D0B7F8 /* ProductListCell.xib in Resources */,
 				73841D461F8E1E4900DA80F5 /* Assets.xcassets in Resources */,
@@ -364,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				73A5B8BB1FA090F10092C715 /* FairShareDemo.xcdatamodeld in Sources */,
+				732F49001FBF73DE005D6085 /* FairShareViewController.swift in Sources */,
 				73841D3F1F8E1E4900DA80F5 /* AppDelegate.swift in Sources */,
 				739FE7771FBA42B900D0B7F8 /* ProductListViewController.swift in Sources */,
 				73A5B8891FA083860092C715 /* AddStoreViewController.swift in Sources */,
