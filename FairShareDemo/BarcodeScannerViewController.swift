@@ -14,7 +14,7 @@ import CoreData
 class BarcodeScannerViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     let controller = BarcodeScannerController()
-    var storePickerList = ["Kauppakeskus Sello", "Malakies", "Iso Omena"]
+    var storePickerList = ["Kauppakeskus Sello", "Other"]
     var productList: [Product] = []
     var shouldDisplayScanner: Bool = false
     

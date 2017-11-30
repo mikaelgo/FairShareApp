@@ -23,6 +23,7 @@ class FairShareViewController: UIViewController {
     var productListItems: [ProductListItem] = []
     
     @IBAction func finnishSessionPressed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "toBarcodeID", sender: self)
     }
     
     override func viewDidLoad() {
@@ -61,7 +62,9 @@ class FairShareViewController: UIViewController {
             if let productVolume = sca.product?.productvolume {
                 let prodVolume = Int(productVolume)
                 let productAmount = Int(sca.amount)
-                return volume + (prodVolume * productAmount)
+                let productDepth = Int((sca.product?.productdepth)!)
+                let productsInTheShelf: Float = (Float(800 / productDepth!))
+                return volume + (prodVolume * productAmount * Int(productsInTheShelf))
             }
             return volume
         }
@@ -70,16 +73,24 @@ class FairShareViewController: UIViewController {
             if let productVolume = mt.product?.productvolume {
                 let prodVolume = Int(productVolume)
                 let productAmount = Int(mt.amount)
-                return volume + (prodVolume * productAmount)
+                let productDepth = Int((mt.product?.productdepth)!)
+                print("TUOTESYVYYS " , productDepth)
+                let productsInTheShelf: Float = (Float(800 / productDepth!))
+                print("Tuotteita hyllyssä!! " , productsInTheShelf)
+                return volume + (prodVolume * productAmount * Int(productsInTheShelf))
             }
             return volume
         }
+        
+        print("MT TILVAUUS " , mtVolume)
         
         let keskoVolume = kesko.reduce(0) {volume, kesko in
             if let productVolume = kesko.product?.productvolume {
                 let prodVolume = Int(productVolume)
                 let productAmount = Int(kesko.amount)
-                return volume + (prodVolume * productAmount)
+                let productDepth = Int((kesko.product?.productdepth)!)
+                let productsInTheShelf: Float = (Float(800 / productDepth!))
+                return volume + (prodVolume * productAmount * Int(productsInTheShelf))
             }
             return volume
         }
@@ -88,18 +99,22 @@ class FairShareViewController: UIViewController {
             if let productVolume = other.product?.productvolume {
                 let prodVolume = Int(productVolume)
                 let productAmount = Int(other.amount)
-                return volume + (prodVolume * productAmount)
+                let productDepth = Int((other.product?.productdepth)!)
+                let productsInTheShelf: Float = (Float(800 / productDepth!))
+                return volume + (prodVolume * productAmount * Int(productsInTheShelf))
             }
             return volume
         }
         
         
         print("SCA: \(scaVolume)\nMT: \(mtVolume)\nKesko: \(keskoVolume)\nOther: \(otherVolume)")
+        
+        let overallVolume: Int = mtVolume + scaVolume + keskoVolume + otherVolume
        
-        let mtFairShare: Int = Int((Float(mtVolume) / 17820000000.0) * 100.0)
-        let scaFairShare: Int = Int((Float(scaVolume) / 17820000000.0) * 100.0)
-        let plFairShare: Int = Int((Float(keskoVolume) / 17820000000.0) * 100.0)
-        let otherFairShare: Int = Int((Float(otherVolume) / 17820000000.0) * 100.0)
+        let mtFairShare: Int = Int((Float(mtVolume) / Float(overallVolume)) * 100.0)
+        let scaFairShare: Int = Int((Float(scaVolume) / Float(overallVolume)) * 100.0)
+        let plFairShare: Int = Int((Float(keskoVolume) / Float(overallVolume)) * 100.0)
+        let otherFairShare: Int = Int((Float(otherVolume) / Float(overallVolume)) * 100.0)
         
         self.mtCurrentFS.text = String(mtFairShare)
         self.scaCurrentFS.text = String(scaFairShare)
