@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		64468935FC94FF572570F2C1 /* Pods_FairShareDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C83C721A7D5685F52AF040 /* Pods_FairShareDemo.framework */; };
 		732F49001FBF73DE005D6085 /* FairShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 732F48FF1FBF73DE005D6085 /* FairShareViewController.swift */; };
+		73652EF41FE05B75009B90EE /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73652EF31FE05B75009B90EE /* AddProductViewController.swift */; };
 		737604691F8E2B9300201B50 /* BarcodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737604681F8E2B9300201B50 /* BarcodeScannerViewController.swift */; };
 		73841D3F1F8E1E4900DA80F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73841D3E1F8E1E4900DA80F5 /* AppDelegate.swift */; };
 		73841D441F8E1E4900DA80F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73841D421F8E1E4900DA80F5 /* Main.storyboard */; };
@@ -19,9 +20,7 @@
 		739FE7771FBA42B900D0B7F8 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739FE7761FBA42B900D0B7F8 /* ProductListViewController.swift */; };
 		739FE7791FBA459F00D0B7F8 /* ProductListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739FE7781FBA459F00D0B7F8 /* ProductListCell.swift */; };
 		739FE77B1FBA4EB900D0B7F8 /* ProductListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 739FE77A1FBA4EB900D0B7F8 /* ProductListCell.xib */; };
-		73A5B8891FA083860092C715 /* AddStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A5B8881FA083860092C715 /* AddStoreViewController.swift */; };
 		73A5B8BB1FA090F10092C715 /* FairShareDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 73A5B8B91FA090F10092C715 /* FairShareDemo.xcdatamodeld */; };
-		73A5B8BD1FA1F4790092C715 /* StoreInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A5B8BC1FA1F4790092C715 /* StoreInfo.swift */; };
 		73FE38211FB4609200AD0647 /* ScannedProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FE38201FB4609200AD0647 /* ScannedProductViewController.swift */; };
 		98E88E79825DA53617D958F7 /* Pods_FairShareDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B5F35654FD9E8BB029444E1 /* Pods_FairShareDemoTests.framework */; };
 /* End PBXBuildFile section */
@@ -42,6 +41,7 @@
 		1D129BA7805A4BA125062D8C /* Pods-FairShareDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FairShareDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FairShareDemoTests/Pods-FairShareDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		554FB6E9D969AC6C1922CEF9 /* Pods-FairShareDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FairShareDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FairShareDemoTests/Pods-FairShareDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		732F48FF1FBF73DE005D6085 /* FairShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FairShareViewController.swift; sourceTree = "<group>"; };
+		73652EF31FE05B75009B90EE /* AddProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
 		737604681F8E2B9300201B50 /* BarcodeScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeScannerViewController.swift; sourceTree = "<group>"; };
 		73841D3B1F8E1E4900DA80F5 /* FairShareDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FairShareDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73841D3E1F8E1E4900DA80F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,9 +56,7 @@
 		739FE7761FBA42B900D0B7F8 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		739FE7781FBA459F00D0B7F8 /* ProductListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListCell.swift; sourceTree = "<group>"; };
 		739FE77A1FBA4EB900D0B7F8 /* ProductListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductListCell.xib; sourceTree = "<group>"; };
-		73A5B8881FA083860092C715 /* AddStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoreViewController.swift; sourceTree = "<group>"; };
 		73A5B8BA1FA090F10092C715 /* FairShareDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FairShareDemo.xcdatamodel; sourceTree = "<group>"; };
-		73A5B8BC1FA1F4790092C715 /* StoreInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreInfo.swift; sourceTree = "<group>"; };
 		73FE38201FB4609200AD0647 /* ScannedProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannedProductViewController.swift; sourceTree = "<group>"; };
 		D9B7F968218420B4573FE780 /* Pods-FairShareDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FairShareDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FairShareDemo/Pods-FairShareDemo.release.xcconfig"; sourceTree = "<group>"; };
 		DB64CC09F0190B5D9C48847E /* Pods-FairShareDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FairShareDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FairShareDemo/Pods-FairShareDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -121,13 +119,12 @@
 				73841D3E1F8E1E4900DA80F5 /* AppDelegate.swift */,
 				73A5B8B91FA090F10092C715 /* FairShareDemo.xcdatamodeld */,
 				737604681F8E2B9300201B50 /* BarcodeScannerViewController.swift */,
+				73652EF31FE05B75009B90EE /* AddProductViewController.swift */,
 				73841D421F8E1E4900DA80F5 /* Main.storyboard */,
 				732F48FF1FBF73DE005D6085 /* FairShareViewController.swift */,
 				739FE7761FBA42B900D0B7F8 /* ProductListViewController.swift */,
-				73A5B8BC1FA1F4790092C715 /* StoreInfo.swift */,
 				739EA8191FBCD85A00EAF7C6 /* products.json */,
 				73FE38201FB4609200AD0647 /* ScannedProductViewController.swift */,
-				73A5B8881FA083860092C715 /* AddStoreViewController.swift */,
 				739FE7781FBA459F00D0B7F8 /* ProductListCell.swift */,
 				739FE77A1FBA4EB900D0B7F8 /* ProductListCell.xib */,
 				73841D451F8E1E4900DA80F5 /* Assets.xcassets */,
@@ -372,12 +369,11 @@
 			files = (
 				73A5B8BB1FA090F10092C715 /* FairShareDemo.xcdatamodeld in Sources */,
 				732F49001FBF73DE005D6085 /* FairShareViewController.swift in Sources */,
+				73652EF41FE05B75009B90EE /* AddProductViewController.swift in Sources */,
 				73841D3F1F8E1E4900DA80F5 /* AppDelegate.swift in Sources */,
 				739FE7771FBA42B900D0B7F8 /* ProductListViewController.swift in Sources */,
-				73A5B8891FA083860092C715 /* AddStoreViewController.swift in Sources */,
 				737604691F8E2B9300201B50 /* BarcodeScannerViewController.swift in Sources */,
 				739FE7791FBA459F00D0B7F8 /* ProductListCell.swift in Sources */,
-				73A5B8BD1FA1F4790092C715 /* StoreInfo.swift in Sources */,
 				73FE38211FB4609200AD0647 /* ScannedProductViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

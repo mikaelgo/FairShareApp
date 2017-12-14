@@ -27,6 +27,7 @@ class ScannedProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Initializing all the different labels that are used in the page
         self.productCode.text = product?.eancode
         self.productName.text = product?.productname
         self.productHeight.text = product?.productheight
@@ -42,6 +43,7 @@ class ScannedProductViewController: UIViewController {
         
         self.context = appDelegate.persistentContainer.viewContext
         
+        //Keyboard with numbers to use for the correct face amount
         let toolbar:UIToolbar = UIToolbar(frame: CGRect(x: 0, y: 0,  width: self.view.frame.size.width, height: 30))
         //create left side empty space so that done button set on right side
         let flexSpace = UIBarButtonItem(barButtonSystemItem:    .flexibleSpace, target: nil, action: nil)
@@ -61,25 +63,17 @@ class ScannedProductViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+   
     
     //MARK: Actions
-    
+    //Function when the Next Product is pressed wich opens the barcode scanner again
     @IBAction func nextProductPressed(_ sender: Any) {
         addProductToList()
         performSegue(withIdentifier: "unwindToScanner", sender: self)
         
     }
     
+    //Function when the Finish Scanning is pressed wich open the product list window
     @IBAction func finishScanningPressed(_ sender: Any) {
         addProductToList()
         self.performSegue(withIdentifier: "toProductList", sender: self)

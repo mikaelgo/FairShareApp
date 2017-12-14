@@ -9,7 +9,9 @@
 import UIKit
 
 class ProductListCell: UITableViewCell {
-
+    
+    //This ViewController is just for the single cell in the tableview
+    
     @IBOutlet weak var productNameLabel: UILabel!
     var productListItem: ProductListItem?
 
@@ -17,8 +19,6 @@ class ProductListCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-//        productNameLabel.text = productListItem?.product?.productname ?? ""
     }
     
     func setup(productListItem: ProductListItem) {

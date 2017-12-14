@@ -13,14 +13,18 @@ import CoreData
 
 class BarcodeScannerViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
+    //Initialize Barcode Scanner and make couple of arrays for PickerView and "Product" Core Data entity
     let controller = BarcodeScannerController()
-    var storePickerList = ["Kauppakeskus Sello", "Other"]
+    var storePickerList = ["K-Citymarket Sello", "K-Market Perkkaa", "K-Market Töyrynummi"]
     var productList: [Product] = []
     var shouldDisplayScanner: Bool = false
     
-
+    //UI Components
     @IBOutlet weak var scanerButton: UIButton!
     @IBOutlet weak var storePickerTextField: UITextField!
+    
+    @IBAction func addProductPressed(_ sender: UIButton) {
+    }
     
     var scannedProduct: Product?
     
@@ -34,6 +38,7 @@ class BarcodeScannerViewController: UIViewController, UIPickerViewDataSource, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Initialize PickerView for use
         let pickerView = UIPickerView()
         
         pickerView.delegate = self
@@ -43,77 +48,79 @@ class BarcodeScannerViewController: UIViewController, UIPickerViewDataSource, UI
         controller.errorDelegate = self
         controller.dismissalDelegate = self
         
+        //Initialize Core Data for usage
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
-
         let context = appDelegate.persistentContainer.viewContext
         
-        
-//        //read products.json file and iterate through each item in the list
-//
-//        //get path of resource file products.json added in the project->build phase
-//        if let path = Bundle.main.path(forResource: "products", ofType: "json") {
-//            do {
-//                //get the data of file if it's valid json
-//                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-//                //parse/serialize json
-//                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
-//                //get the array list "products" from jsonResult found from the root of json object and set it as allProducts
-//                if let jsonResult = jsonResult as? [String: Any], let allProducts = jsonResult["products"] as? [Any] {
-//                    //iterate through each json object in allProducts list
-//                    for product in allProducts {
-//                        //Add each product to core data if it's not already there
-//                        let productData = NSEntityDescription.insertNewObject(forEntityName: "Product", into: context) as! Product
-//                        guard let productDict = product as? [String: Any] else { return }
-//
-//                        for (key, value) in productDict {
-//                            switch(key) {
-//                            case "eancode":
-//                                productData.eancode = String(describing: value)
-//                                break
-//                            case "productname":
-//                                productData.productname = value as? String
-//                                break
-//                            case "productwidth":
-//                                productData.productlength =  String(describing: value)
-//                                break
-//                            case "productdepht":
-//                                productData.productdepth =  String(describing: value)
-//                                break
-//                            case "productheight":
-//                                productData.productheight =  String(describing: value)
-//                                break
-//                            case "productcategory":
-//                                productData.productcategory = value as? String
-//                                break
-//                            case "productlabel":
-//                                productData.productlabel = value as? String
-//                                break
-//                            case "productvolume":
-//                                guard let integerValue = value as? Int else { return }
-//                                productData.productvolume = Int32.init(truncating: integerValue as NSNumber)
-//                                break
-//                            default:
-//                                break
-//                            }
-//                        }
-//                        do {
-//                            try context.save()
-//                            print("SAVED")
-//                        }
-//                        catch {
-//                            //ERROR HANDLING
-//                        }
-//                    }
-//                }else{
-//                    print("else")
-//                }
-//            } catch {
-//                // handle error
-//            }
-//        }
+        //At the moment the following bit of code where the json is parsed and the data is saved, needs to be commented after the initial build, otherwise the application will add every time the application starts it will add the full json list to the Core Data
+
+        //Read products.json file and iterate through each item in the list
+        //get path of resource file products.json added in the project->build phase
+        if let path = Bundle.main.path(forResource: "products", ofType: "json") {
+            do {
+                //get the data of file if it's valid json
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                //parse/serialize json
+                let jsonResult = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+                //get the array list "products" from jsonResult found from the root of json object and set it as allProducts
+                if let jsonResult = jsonResult as? [String: Any], let allProducts = jsonResult["products"] as? [Any] {
+                    //iterate through each json object in allProducts list
+                    for product in allProducts {
+                        //Add each product to core data if it's not already there
+                        let productData = NSEntityDescription.insertNewObject(forEntityName: "Product", into: context) as! Product
+                        guard let productDict = product as? [String: Any] else { return }
+                        //Switch case to add the correct value to the correct key in Core Data
+                        for (key, value) in productDict {
+                            switch(key) {
+                            case "eancode":
+                                productData.eancode = String(describing: value)
+                                break
+                            case "productname":
+                                productData.productname = value as? String
+                                break
+                            case "productwidth":
+                                productData.productlength =  String(describing: value)
+                                break
+                            case "productdepht":
+                                productData.productdepth =  String(describing: value)
+                                break
+                            case "productheight":
+                                productData.productheight =  String(describing: value)
+                                break
+                            case "productcategory":
+                                productData.productcategory = value as? String
+                                break
+                            case "productlabel":
+                                productData.productlabel = value as? String
+                                break
+                            case "productvolume":
+                                guard let integerValue = value as? Int else { return }
+                                productData.productvolume = Int32.init(truncating: integerValue as NSNumber)
+                                break
+                            default:
+                                break
+                            }
+                        }
+                        do {
+                            //Save the given data to Core Data
+                            try context.save()
+                            print("Data Saved!")
+                        }
+                        catch {
+                            print("Couldn't save the data!")
+                            print(error)
+                        }
+                    }
+                }else{
+                    print("else")
+                }
+            } catch {
+                print(error)
+            }
+        }
         
     
-        //FETCH CORE DATA
+        //Fetch the data from Core Data
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Product")
         request.returnsObjectsAsFaults = false
 
@@ -121,26 +128,15 @@ class BarcodeScannerViewController: UIViewController, UIPickerViewDataSource, UI
             let results = try context.fetch(request)
 
             if results.count > 0 {
-
                 for result in results as! [Product] {
-
-
                     productList.append(result)
                     print(results)
-
-
-                   /* if let productname = result.value(forKey: "productname") as? String {
-                        print(productname)
-                    }
-                    if let eancode = result.value(forKey: "eancode") as? String {
-                        productList.append(eancode)
-                        print("Ean code list: \(productList)\n")
-                    }*/
                 }
             }
         }
         catch {
-            //ERROR HANDLING
+            print("Couldn't Fetch the data")
+            print(error)
         }
         
     }
@@ -156,20 +152,7 @@ class BarcodeScannerViewController: UIViewController, UIPickerViewDataSource, UI
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+
     //MARK: PickerView delegate and datasource
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -204,9 +187,11 @@ class BarcodeScannerViewController: UIViewController, UIPickerViewDataSource, UI
 
 extension BarcodeScannerViewController: BarcodeScannerCodeDelegate {
     
+    //Function when the barcode matches the Core Data EAN code list
     func barcodeScanner(_ controller: BarcodeScannerController, didCaptureCode code: String, type: String) {
         print(code)
         print(type)
+        //Filter through the Core Data and compare the scanned barcode to the EAN Code list in Core Data
         let filteredProducts = productList.filter { $0.eancode == code }
         if filteredProducts.count > 0 {
             self.scannedProduct = filteredProducts[0]
@@ -234,7 +219,7 @@ extension BarcodeScannerViewController: BarcodeScannerErrorDelegate {
         print(error)
     }
 }
-
+//Display error when the scanner dosen't find barcode
 extension BarcodeScannerViewController: BarcodeScannerDismissalDelegate {
     
     func barcodeScannerDidDismiss(_ controller: BarcodeScannerController) {

@@ -15,13 +15,10 @@ class FairShareViewController: UIViewController {
     @IBOutlet weak var plCurrentFS: UILabel!
     @IBOutlet weak var otherCurrentFS: UILabel!
     
-    @IBOutlet weak var mtPlannedFS: UILabel!
-    @IBOutlet weak var scaPlannedFS: UILabel!
-    @IBOutlet weak var plPlannedFS: UILabel!
-    @IBOutlet weak var otherPlannedFS: UILabel!
-    
+    //Make an empty Product list item array
     var productListItems: [ProductListItem] = []
     
+    //Function to handle the finish session button being pressed and directing it to the main page
     @IBAction func finnishSessionPressed(_ sender: UIButton) {
         self.performSegue(withIdentifier: "toBarcodeID", sender: self)
     }
@@ -39,25 +36,17 @@ class FairShareViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
+    //Function to calculate the fair share of the scanned items
     func calculateFairShare() {
         
+        //Filter through the different producers in Core Data and add the correct items to the correct 'label names'
         let sca = self.productListItems.filter { $0.product?.productlabel == "SCA" }
         let mt = self.productListItems.filter { $0.product?.productlabel == "MT" }
         let kesko = self.productListItems.filter { $0.product?.productlabel == "Ruokakesko Oy" }
         let other = self.productListItems.filter { $0.product?.productlabel != "Ruokakesko Oy" && $0.product?.productlabel != "SCA" && $0.product?.productlabel != "MT" }
         print("SCA: \(sca)\nMT: \(mt)\nKesko: \(kesko)\nOther: \(other)")
         
+        //Calculate the product volume correctly for all the different producers
         let scaVolume = sca.reduce(0) {volume, sca in
             if let productVolume = sca.product?.productvolume {
                 let prodVolume = Int(productVolume)
@@ -74,7 +63,6 @@ class FairShareViewController: UIViewController {
                 let prodVolume = Int(productVolume)
                 let productAmount = Int(mt.amount)
                 let productDepth = Int((mt.product?.productdepth)!)
-                print("TUOTESYVYYS " , productDepth)
                 let productsInTheShelf: Float = (Float(800 / productDepth!))
                 print("Tuotteita hyllyssä!! " , productsInTheShelf)
                 return volume + (prodVolume * productAmount * Int(productsInTheShelf))
@@ -82,7 +70,6 @@ class FairShareViewController: UIViewController {
             return volume
         }
         
-        print("MT TILVAUUS " , mtVolume)
         
         let keskoVolume = kesko.reduce(0) {volume, kesko in
             if let productVolume = kesko.product?.productvolume {
@@ -111,6 +98,7 @@ class FairShareViewController: UIViewController {
         
         let overallVolume: Int = mtVolume + scaVolume + keskoVolume + otherVolume
        
+        //Calculate the fair share for all the different producers
         let mtFairShare: Int = Int((Float(mtVolume) / Float(overallVolume)) * 100.0)
         let scaFairShare: Int = Int((Float(scaVolume) / Float(overallVolume)) * 100.0)
         let plFairShare: Int = Int((Float(keskoVolume) / Float(overallVolume)) * 100.0)
